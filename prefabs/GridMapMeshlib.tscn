@@ -1,0 +1,87 @@
+[gd_scene load_steps=16 format=2]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="NoiseTexture" id=2]
+seamless = true
+noise = SubResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.0823529, 0.631373, 0.0509804, 1 )
+albedo_texture = SubResource( 2 )
+uv1_triplanar = true
+
+[sub_resource type="CubeMesh" id=4]
+material = SubResource( 3 )
+size = Vector3( 2, 0.2, 2 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 1, 0.1, 1 )
+
+[sub_resource type="OpenSimplexNoise" id=6]
+
+[sub_resource type="NoiseTexture" id=7]
+seamless = true
+noise = SubResource( 6 )
+
+[sub_resource type="SpatialMaterial" id=8]
+albedo_color = Color( 0.0431373, 0.482353, 0.235294, 1 )
+albedo_texture = SubResource( 7 )
+uv1_triplanar = true
+
+[sub_resource type="CubeMesh" id=9]
+material = SubResource( 8 )
+size = Vector3( 2, 0.2, 2 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 1, 0.1, 1 )
+
+[sub_resource type="OpenSimplexNoise" id=11]
+period = 38.1
+
+[sub_resource type="NoiseTexture" id=12]
+seamless = true
+noise = SubResource( 11 )
+
+[sub_resource type="SpatialMaterial" id=13]
+albedo_color = Color( 0.960784, 0.72549, 0.160784, 1 )
+albedo_texture = SubResource( 12 )
+uv1_triplanar = true
+
+[sub_resource type="CubeMesh" id=14]
+material = SubResource( 13 )
+size = Vector3( 2, 0.2, 2 )
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 1, 0.1, 1 )
+
+[node name="MeshLib" type="Spatial"]
+
+[node name="Ground1" type="MeshInstance" parent="."]
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Ground1"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground1/StaticBody"]
+shape = SubResource( 5 )
+
+[node name="Ground2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6313, 0, 0 )
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Ground2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground2/StaticBody"]
+shape = SubResource( 10 )
+
+[node name="Rand" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75038, -0.0262055, 0.0274315 )
+mesh = SubResource( 14 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="Rand"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Rand/StaticBody"]
+shape = SubResource( 15 )

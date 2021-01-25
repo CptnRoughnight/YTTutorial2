@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tower Defense", "Tower Defense.csproj", "{83064BE2-1EFF-41C6-B62F-606AED292B14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83064BE2-1EFF-41C6-B62F-606AED292B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83064BE2-1EFF-41C6-B62F-606AED292B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83064BE2-1EFF-41C6-B62F-606AED292B14}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{83064BE2-1EFF-41C6-B62F-606AED292B14}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{83064BE2-1EFF-41C6-B62F-606AED292B14}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{83064BE2-1EFF-41C6-B62F-606AED292B14}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
